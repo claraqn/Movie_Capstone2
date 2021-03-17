@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Title</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{url_for('static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="{{url_for('static', filename='vendor/simple-line-icons/css/simple-line-icons.css')}}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{url_for('static', filename='css/stylish-portfolio.min.css')}}" rel="stylesheet">
+<style>
+.right{
+  float : right;
+}
+.left{
+  float : left;
+
+}
+.blue{
+  background-color: #007bff !important;
+}
+html body{
+  width : 100%;
+  height : 100%;
+
+}
+
+.textcolor_blue{
+  color : rgb(17, 40, 104);
+  font-size : small;
+  font-weight: bold;
+}
+
+</style>
+</head>
+<body class="bg-primary">
+<!-- chart -->
+
+<section class="text-white text-center" id="services">
+    <div class="container">
+      <div class="content-section-heading">
+        <h3 class="text-secondary mb-0"  id="page-top"><br>Movie Chart</h3>
+        <h3 class="bg-primary">실시간 영화순위</h3>
+        <br>
+      </div>
+    </div>
+</section> 
+
+
+
+<section class="text-white">
+      {% for i,j,e,f,m,p,n,s in 
+        zip(ftitle,fdirectorList,fcastList,
+        fnoList,fimgList,fscoreList,fgenreList,
+        fvideoList) %}
+      <div style="width:200px; height:150px; float:left; text-align:center">
+        <img src="{{m}}">
+      </div>
+      <div style="width:400px; height:150px; float:left;">
+        <strong>{{f}}. {{i}}</strong>
+        <br><I class="textcolor_blue">평점 : {{p}}</I>
+        &nbsp<I class="textcolor_blue">장르 : {{n}}</I>
+        <div>
+          감독 : {{j}}<br>
+          출연진 : {{e}}<br>
+        </div>
+        <div>
+          <a class="textcolor_blue" onclick="window.open(this.href, '_blank', 'width=가로사이즈px,height=세로사이즈px,toolbars=no,scrollbars=no'); return false;"
+          href="https://movie.naver.com/movie/running/current.nhn+{{s}}">예고편</a>&nbsp&nbsp&nbsp
+          <a class="textcolor_blue" href="https://ticket.movie.naver.com/Ticket/Reserve.aspx?m_id=M000122077&t_tab=1">네이버예매하기</a>
+        </div>
+      </div>
+      {% endfor %}
+</section> 
+
+
+
+</body>
+
+  <footer>
+      <!--Scroll to Top Button-->
+      <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+          <i class="fas fa-angle-up"></i>
+      </a>
+     
+      <!-- Bootstrap core JavaScript -->
+      <script src="{{url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+      <script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+      <!-- Plugin JavaScript -->
+      <script src="{{url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+
+      <!-- Custom scripts for this template -->
+      <script src="{{url_for('static', filename='js/stylish-portfolio.min.js')}}"></script>
+  </footer>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Find Your Movie</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="{{url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="{{url_for('static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="{{url_for('static', filename='vendor/simple-line-icons/css/simple-line-icons.css')}}" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="{{url_for('static', filename='css/stylish-portfolio.min.css')}}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#movie_chart">Movie Chart</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#chat_bot">Chat Bot</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#recommendation">Recommendation</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#map">Map</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="/login">Login</a>
+      </li>
+    </ul>
+  </nav>
+
+  
+
+  <!-- Portfolio -->
+  <section class="content-section" id="portfolio">
+    <div class="container">
+      <div class="content-section-heading text-center">
+        <h3 class="text-secondary mb-0">welcome</h3>
+        <h2 class="mb-5">Find your Movie</h2>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6" id="movie_chart">
+          <a class="portfolio-item" href="/moviechart">
+            <div class="caption">
+              <div class="caption-content">
+                <div class="h2">Movie chart</div>
+                <p class="mb-0">현재 상영중인 영화의 순위를 확인해보세요!</p>
+              </div>
+            </div>
+            <img class="img-fluid" src="{{url_for('static', filename='img/movie.jpg')}}" alt="">
+          </a>
+        </div>
+        <div class="col-lg-6" id="chat_bot">
+          <a class="portfolio-item" href="/chatbot">
+            <div class="caption">
+              <div class="caption-content">
+                <div class="h2">Chat Bot</div>
+                <p class="mb-0">챗봇서비스로 주변 영화관을 찾아보세요!</p>
+              </div>
+            </div>
+            <img class="img-fluid" src="{{url_for('static', filename='img/chatbot.jpg')}}" alt="">
+          </a>
+        </div>
+        <div class="col-lg-6" id="recommendation">
+          <a class="portfolio-item" href="#!">
+            <div class="caption">
+              <div class="caption-content">
+                <div class="h2">Recommendation</div>
+                <p class="mb-0">취향을 분석받아 영화를 추천받아보세요!</p>
+              </div>
+            </div>
+            <img class="img-fluid" src="{{url_for('static', filename='img/recommend.jpg')}}" alt="">
+          </a>
+        </div>
+        <div class="col-lg-6" id="map">
+          <a class="portfolio-item" href="/map">
+            <div class="caption">
+              <div class="caption-content">
+                <div class="h2">Map</div>
+                <p class="mb-0">위치를 확인해보세요!</p>
+              </div>
+            </div>
+            <img class="img-fluid" src="{{url_for('static', filename='img/map2.jpg')}}" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{{url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{{url_for('static', filename='js/stylish-portfolio.min.js')}}"></script>
+
+</body>
+
+</html>
