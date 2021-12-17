@@ -1,7 +1,40 @@
-# 2020 Capstone2
+## 2020 캡스톤디자인2
 
-## MovieInfo with chatbot
+<br>
 
-[![Video Label](http://img.youtube.com/vi/uLR1RNqJ1Mw/0.jpg)](https://www.youtube.com/watch?v=05WQuflaIos)
+<h3>주제</h3>
+<li>영화정보 크롤링(스크래핑)을 통한 웹사이트,채팅 서비스
+<hr>
+<h3>서비스 필요성</h3>
+<aside>
+🎥 '영화관 검색→GPS를 통한 가까운 영화관 위치 목록 제공받음→해당 영화관 재검색→해당 영화관 사이트의 상영시간표 찾아봄→조건에 맞는 영화찾기'
+</aside>의 과정이 번거로워 좀 더 간편하게 정보를 받아볼 수 있지 않을까 하는 궁금증에서 시작되었다.
+<hr>
+<h3>서비스 구성도 및 주요 기능</h3>
 
-## Flask
+> `크롤링(스크래핑)으로 영화와 관련된 정보를 가져오고, Flask를 통해 웹사이트 구현`
+
+<li>실시간 영화 순위 제공
+<li>해당 영화의 제목,순위,평점,예매율,감독,출연진 등의 정보 제공
+<li>해당 영화의 예고편 및 예매하기 페이지 이동
+
+<br>
+
+> `Telegram을 사용해 사용자가 채팅을 통해 영화 및 영화관에 관련된 정보를 받을 수 있게 구현`
+
+<li>현재위치 확인 ⇒ /location
+<li>실시간 영화 순위 제공(상위 10개) ⇒ /chart
+<li>해당 영화의 포스터 및 간단한 정보 제공 ⇒ /info
+<li>가장 가까운 영화관 최대 3개 찾기 ⇒ /near
+<hr>
+
+<h3>Skill</h3>
+<li>python
+<li>Flask
+<li>채팅프로그램 : Telegram
+<hr>
+<h3>프로젝트 진행기간</h3>
+<li>2020.9~2020.12 (3학년 2학기 캡스톤디자인)
+<hr>
+<h3>구현 영상 링크</h3>
+https://www.youtube.com/watch?v=05WQuflaIos
